@@ -27,7 +27,7 @@ html, body, #mapid {
         attribution:'&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> Contributors'
     }).addTo(map);
     
-    //마커 설정
+    //마커 설정과 팝업
     var marker = L.marker([37.481481, 126.880481]).addTo(map);
     
     marker.bindPopup("<b>Hello sundosoft!</b>").openPopup();
