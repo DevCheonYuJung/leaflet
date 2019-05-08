@@ -34,11 +34,18 @@ public class HomeController {
 
 		logger.info("home");
 		
-		List<MemberVO> memberList = service.selectMember();
-		
-		model.addAttribute("memberList", memberList);
-
 		return "home";
 	}
 	
+	@RequestMapping(value = "/d.do", method = RequestMethod.GET)
+	public String insertMarker() {
+		
+		return "leaflet_marker";
+	}
+	
+	@RequestMapping("markercluster")
+	public String MarkerCluster() {
+		
+		return "leaflet_markerCluster";
+	}
 }

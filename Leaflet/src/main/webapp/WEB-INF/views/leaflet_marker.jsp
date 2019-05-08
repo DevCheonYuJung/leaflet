@@ -4,9 +4,14 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet"
-	href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="resources/dist/screen.css" />
+<link rel="stylesheet" href="resources/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="resources/dist/MarkerCluster.Default.css" />
+<script src="resources/dist/leaflet.markercluster-src.js"></script>
+
 <style>
 html, body, #mapid {
 	height: 100%;
@@ -15,12 +20,12 @@ html, body, #mapid {
 </style>
 </head>
 <body>
-	<div id='mapid'></div>
+	<div id='map'></div>
 </body>
 <script>
 
 	//지도 설정 setView([위도, 경도], 줌크기_클수록 확대);
-    var map = L.map('mapid').setView([37.481481, 126.880481], 16);
+    var map = L.map('map').setView([37.481481, 126.880481], 16);
 
     //지도 뿌리기
     var layer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
